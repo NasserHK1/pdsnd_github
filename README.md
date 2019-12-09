@@ -1,6 +1,10 @@
 # Handling user inputs
 A function that handles the user inputs has been added to the project *bikeshare*.
 
+# Loading Data
+a function to load the data from the data files has been added to the *bikeshare* project.
+
+
 ### Date created
 Include the date you created this project and README file.
 
