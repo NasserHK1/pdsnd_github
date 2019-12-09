@@ -1,12 +1,3 @@
-# Handling user inputs
-a function to Read and filter the user inputs has been added to the *bikeshare* project.
-
-# Loading Data
-a function to load the data from the data files has been added to the *bikeshare* project.
-
-# Statistics
-a function to do the statistics has been added to the *bikeshare* project.
-
 ### Date created
 Include the date you created this project and README file.
 
