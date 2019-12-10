@@ -71,19 +71,19 @@ def load_data(city, month, day):
         df = pd.read_csv(CITY_DATA['new york city'])
     else:
         df = pd.read_csv(CITY_DATA['washington'])
-    
+
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
-    
+
     df['day'] = df['Start Time'].dt.day_name()
     df['month'] = df['Start Time'].dt.month_name()
-    
+
     if month != 'All':
         df = df[df['month'] == month]
     if day != 'All':
-        df = df[df['day'] == day] 
-    
-        
+        df = df[df['day'] == day]
+
+
     return df
 
 
@@ -149,10 +149,10 @@ def trip_duration_stats(df):
     # TO DO: display mean travel time
     Mean_trip_duration= df['Trip Duration'].mean()
     print('Mean travel time:\n{} \n'.format(Mean_trip_duration))
-    
+
     Total_count_of_Trips= df['Trip Duration'].count()
     print('Number of trips:\n{} \n'.format(Total_count_of_Trips))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -179,8 +179,8 @@ def user_stats(df):
     print('Oldest year of birth : ' , df['Birth Year'].min())
     print('\nNewest year of birth : ' ,df['Birth Year'].max())
     print('\nMost common year of birth : ', df['Birth Year'].mode()[0])
-    
-  
+
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -189,7 +189,8 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
+
+        """Displays 5 rows of raw data"""
         user_raw_data= input("Do you want to see raw data? Enter : yes or no.\n").lower()
         start = 0
         end = 5
@@ -198,8 +199,8 @@ def main():
             start += 5
             end += 5
             user_raw_data= input("Do you still want to see more raw data? Enter : yes or no.\n").lower()
-        
-        
+
+
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
