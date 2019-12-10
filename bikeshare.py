@@ -195,14 +195,14 @@ def main():
         print('-'*40)
 
 
-        user_raw_data= input("Do you want to see raw data? Enter : yes or no.\n").lower()
+        user_raw_data= input("Do you want to see raw data (5 rows)? Enter : yes or no.\n").lower()
         start = 0
         end = 5
         while(user_raw_data == "yes"):
             print(df.iloc[start:end])
             start += 5
             end += 5
-            user_raw_data= input("Do you still want to see more raw data? Enter : yes or no.\n").lower()
+            user_raw_data= input("Do you still want to see more raw data (5 rows)? Enter : yes or no.\n").lower()
 
 
         time_stats(df)
