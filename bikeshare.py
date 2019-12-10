@@ -188,19 +188,42 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
+
         df = load_data(city, month, day)
+<<<<<<< HEAD
 
         """Displays 5 rows of raw data"""
         user_raw_data= input("Do you want to see raw data? Enter : yes or no.\n").lower()
+||||||| merged common ancestors
+        
+        user_raw_data= input("Do you want to see raw data? Enter : yes or no.\n").lower()
+=======
+        print('-'*40)
+        print('the data is ready to be viewed')
+        print('-'*40)
+
+
+        user_raw_data= input("Do you want to see raw data (5 rows)? Enter : yes or no.\n").lower()
+>>>>>>> refactoring
         start = 0
         end = 5
         while(user_raw_data == "yes"):
             print(df.iloc[start:end])
             start += 5
             end += 5
+<<<<<<< HEAD
             user_raw_data= input("Do you still want to see more raw data? Enter : yes or no.\n").lower()
 
 
+||||||| merged common ancestors
+            user_raw_data= input("Do you still want to see more raw data? Enter : yes or no.\n").lower()
+        
+        
+=======
+            user_raw_data= input("Do you still want to see more raw data (5 rows)? Enter : yes or no.\n").lower()
+
+
+>>>>>>> refactoring
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
