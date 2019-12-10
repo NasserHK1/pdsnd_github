@@ -7,6 +7,8 @@ a function to load the data from the data files has been added to the *bikeshare
 # Statistics
 a function to do the statistics has been added to the *bikeshare* project.
 
+# Showing raw data
+a piece of code was added to the *bikeshare* project to show the user a 5 rows of the raw data.  
 ### Date created
 Include the date you created this project and README file.
 
