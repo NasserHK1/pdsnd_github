@@ -190,12 +190,14 @@ def main():
         city, month, day = get_filters()
 
         df = load_data(city, month, day)
-<<<<<<< HEAD
+        print('-'*40)
+        print('the data is ready to be viewed')
+        print('-'*40)
 
-        """Displays 5 rows of raw data"""
-        user_raw_data= input("Do you want to see raw data? Enter : yes or no.\n").lower()
+
+        user_raw_data= input("Do you want to see raw data (5 rows)? Enter : yes or no.\n").lower()
 ||||||| merged common ancestors
-        
+
         user_raw_data= input("Do you want to see raw data? Enter : yes or no.\n").lower()
 =======
         print('-'*40)
@@ -211,14 +213,13 @@ def main():
             print(df.iloc[start:end])
             start += 5
             end += 5
-<<<<<<< HEAD
-            user_raw_data= input("Do you still want to see more raw data? Enter : yes or no.\n").lower()
+            user_raw_data= input("Do you still want to see more raw data (5 rows)? Enter : yes or no.\n").lower()
 
 
 ||||||| merged common ancestors
             user_raw_data= input("Do you still want to see more raw data? Enter : yes or no.\n").lower()
-        
-        
+
+
 =======
             user_raw_data= input("Do you still want to see more raw data (5 rows)? Enter : yes or no.\n").lower()
 
